@@ -39,14 +39,11 @@ class App extends Component {
   }
 
   render() {
-
     return (
-
       <div className='page-container'>
         <Answer
           display={this.state.display}
         />
-
         <Calculator
           handleClick={this.handleClick}
         />
@@ -60,7 +57,6 @@ class App extends Component {
 }
 
 class Calculator extends Component {
-
   createNumbers = num => {
     const { handleClick } = this.props;
     return (
@@ -76,7 +72,6 @@ class Calculator extends Component {
   }
 }
 class ClearEquals extends Component {
-
   render() {
     const { handleReset, calculateResult } = this.props;
     return (
@@ -87,7 +82,6 @@ class ClearEquals extends Component {
     )
   }
 }
-
 class Answer extends Component {
   render() {
     const { display } = this.props;
