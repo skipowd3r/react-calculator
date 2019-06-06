@@ -13,20 +13,15 @@ class App extends Component {
     }
   }
   handleClick = e => {
-    console.log(e.target.value, typeof (e.target.value))
     let val = e.target.value;
     this.setState({
       display: this.state.display + val
     })
   }
-
   handleReset = () => {
-    console.log('resetting to 0')
     this.setState({ result: '', display: '' })
   }
-
   calculateResult = () => {
-    console.log(this.state.display)
     try {
       let answer = eval(this.state.display);
       this.setState({ 
