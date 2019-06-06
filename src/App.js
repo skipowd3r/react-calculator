@@ -25,7 +25,6 @@ class App extends Component {
   }
   calculateResult = () => {
     try {
-      //let answer = eval(this.state.display);
       let answer = Parser.evaluate(this.state.display);
       console.log(answer)
       this.setState({ 
