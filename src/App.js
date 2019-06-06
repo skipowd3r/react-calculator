@@ -4,6 +4,8 @@ import Calculator from './Calculator.js';
 import ClearEquals from './ClearEquals.js';
 import Answer from './Answer.js';
 
+var Parser = require('expr-eval').Parser;
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -23,7 +25,9 @@ class App extends Component {
   }
   calculateResult = () => {
     try {
-      let answer = eval(this.state.display);
+      //let answer = eval(this.state.display);
+      let answer = Parser.evaluate(this.state.display);
+      console.log(answer)
       this.setState({ 
         result: (answer || '') + '',
         display: answer
